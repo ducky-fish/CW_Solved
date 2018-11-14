@@ -39,5 +39,5 @@ public String toJadenCase(String phrase) {
   	} 
 	  return Cap_String;
   	}
-  
-  }
+}
+}
