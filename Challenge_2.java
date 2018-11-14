@@ -1,28 +1,26 @@
 /* Jaden Smith's Tweets all have the same characteristic
  * Every word is capitalized, So that is the challenge
  * Given a String, return a string with the first letter 
- * of every word capitalized
+ * of every word capitalized and return null if string
+ * is less than 0 in length or is null itself.
  */
-public class Main {
-	public static void main(String[] args){
-		tester();
-	}
 
-	public static void tester(){
-	String Test_Case = "testing please all caps babe";
-  	System.out.print(toJadenCase(Test_Case));
-	}
-
-	public static String toJadenCase(String phrase) {
-	  //Phrase_Count is an int for the input length
-    //Cap_String is our version of phrase that we'll be changing
+public class JadenCase {
+  
+public String toJadenCase(String phrase) {
+  if(phrase == null){
+    return null;}
+		
+  //Phrase_Count is an int for the input length
+  //Cap_String is our version of phrase that we'll be changing
   int Phrase_Count = phrase.length();
   String Cap_String = phrase;
-
+  if(Phrase_Count <=0){
+    return null; }
+  
+  else{
     //If our string length is greater than 0 we want to do the operations
-    //else we return null
-  if(Phrase_Count > 0){
-    
+    //else we return null  
     //We capitalize entry 0 because the method to check won't work
     //for the first entry. 
     //Check length for every " " and obtain, index + 1 of every " "
@@ -38,10 +36,8 @@ public class Main {
       Char_String = Char_String.toUpperCase();
       Cap_String = Cap_String.substring(0,Char_Count) + " " + Char_String + Cap_String.substring(Char_Count+2);
 	  }
-  } 
+  	} 
 	  return Cap_String;
-	}
-	return "that didn't work";
-	}
-
-}
+  	}
+  
+  }
