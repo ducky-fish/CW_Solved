@@ -1,3 +1,8 @@
+/* Jaden Smith's Tweets all have the same characteristic
+ * Every word is capitalized, So that is the challenge
+ * Given a String, return a string with the first letter 
+ * of every word capitalized
+ */
 public class Main {
 	public static void main(String[] args){
 		tester();
