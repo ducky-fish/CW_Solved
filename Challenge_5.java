@@ -13,8 +13,11 @@ public class FindOutlier{
 //Given an int array we search for the 'Odd One Out'
 //Take length of array, inspect index 0 and 1 for equality
 //continue to increase index 0 (k) and 1 (j) until !=
-//when != inspect the k+1 and j+1 pair for 
-//
+//when != inspect the k+1 and j+1 pair for != which 
+//warrants that k+1 aka our previous j is result
+//else it's k. We can assume that if arrayLength < 2
+//that result wil be remaining index ergo ++k.
+  
   static int find(int[] x){
    int arrayLength = x.length;
    int k = 0;
