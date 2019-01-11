@@ -57,3 +57,29 @@ public static boolean evenChecker(int[] x, int index) {
     }
 }
 }
+
+/*some interesting notation and logic that I hadn't thought of. btw a colon e.g. ':' is used to iterate through a collection, oddly enough can use "for" loop with this style. Format is as such 
+"variable to be temporary item representation that increases : collection in question"
+below is solution from User: mortonfox
+
+static int find(int[] integers) {
+        int oddcount = 0, odd = 0, evencount = 0, even = 0;
+        for (int i : integers) {
+            if (i % 2 == 0) {
+                even = i;
+                evencount++;
+            } else {
+                odd = i;
+                oddcount++;
+            }
+            if (evencount > 0 && oddcount > 0) {
+                if (evencount > 1) {
+                    return odd;
+                } else if (oddcount > 1) {
+                    return even;
+                }
+            }
+        }
+        return evencount > 1 ? odd : even;
+    }
+*/
